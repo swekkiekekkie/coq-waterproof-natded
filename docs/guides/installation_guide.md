@@ -8,6 +8,9 @@ Waterproof is accessible through a VSCode extension built on coq-lsp.
 The extension is available on the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=waterproof-tue.waterproof).
 More detailed installation instructions can be found on its [GitHub repository](https://github.com/impermeable/waterproof-vscode).
 
+Wat als je al Coq op je systeem hebt?
+
+
 ## Option 2: Install coq-lsp and coq-waterproof, and use your editor of choice
 Since coq-lsp implements the Language Server Protocol, it can be used with any editor that supports the protocol, such as Vim, Emacs, most IDEs, etc. CoqIDE is also an option.
 
