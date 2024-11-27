@@ -46,8 +46,8 @@ The documentation is organized into several key sections, each serving a specifi
 
 - **Purpose**: Provide guides for users.
 - **Contents**:
-  - *Installation Guide*, which provides a guide for users to install the coq-waterproof-natded plugin, and the dependencies.
-  - *User Guide*, which provides a guide for users to understand how to use the coq-waterproof-natded plugin.
+  - [*Installation Guide*](docs/guides/installation_guide.md), which provides a guide for users to install the coq-waterproof-natded plugin, and the dependencies.
+  - [*User Guide*](docs/guides/user_guide.md), which provides a guide for users to understand how to use the coq-waterproof-natded plugin.
 - **Location**: `docs/guides/`
 
 Possible future additions:

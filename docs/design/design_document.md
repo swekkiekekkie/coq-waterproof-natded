@@ -128,11 +128,9 @@ Explanation of the proof steps:
     - Inductive step (`n = S n'`): We assume the induction hypothesis (`IHn'`) that `add n' m = add m n'`. We then simplify `add (S n') m` to `S (add n' m)` and use the induction hypothesis to rewrite it to `S (add m n')`, which simplifies to `add m (S n')`.
 3. `reflexivity`: Concludes the proof when both sides of the equation are identical.
 
-#####Mathematical Basis of Coq
+##### Mathematical Basis of Coq
 
 Coq is based on type theory. Specifically, it is based on the Calculus of Inductive Constructions (CIC).
-
-Key mathematical foundations include:
 
 - Type Theory: In Coq, types play a central role. Every term has a type, and types themselves can be manipulated as first-class citizens. This allows for a uniform treatment of programs and proofs.
 
@@ -143,6 +141,7 @@ Key mathematical foundations include:
 - Inductive Definitions: Coq's ability to define inductive types and predicates allows for the construction of complex mathematical objects and the formulation of properties about them.
 
 - Constructive Logic: Coq operates within constructive logic, where existence proofs require the explicit construction of an example. This contrasts with classical logic, where non-constructive proofs are allowed.
+Coq has implemented methods to embed classical logic into the constructive logic, so this is not a fundamental limitation.
 
 - Strong Normalization and Consistency: The type system of Coq is designed to ensure that all computations terminate (strong normalization). This property is crucial for the consistency of the logic, preventing paradoxes like those found in unrestricted set theories.
 
@@ -172,6 +171,9 @@ Can be found in the README.md file of the coq-waterproof repository.
 
 #### Dune
 Dune is a build system for OCaml projects. It is used to compile and link the Coq plugin.
+This is done with `dune-project` files that set project-wide options, and `dune` files that set directory-wide options.
+Dune has support for Coq, which is enabled in the `dune-project` file with the line `(using coq 0.6)`. This allows Dune to build Coq theories and plugins. The version number (0.6) specifies which version of Dune's Coq support to use (not the version of Coq itself).
+
 
 #### Ltac2
 Ltac2 is a tactic language for Coq. It is used to write tactics for coq-waterproof, and coq-waterproof-natded.
@@ -286,3 +288,22 @@ The library is built using:
 The library is structured as a Coq plugin, and is built using Dune.
 
 The structure of the library will be identical to that of coq-waterproof.
+
+```
+│   # Documentation
+├── project-overview.md                 
+├── documentation-structure.md          
+├── docs/
+│
+│   # Implementation
+├── src/                                # OCaml source code (if needed)
+├── theories/                           # Coq theories
+│   ├── Notations.v                     # File exporting the contents of the Notations directory
+│   ├── Notations/                      # Notation files
+│   │   ├── Connectives.v               #   Notations for connectives
+│   │   └── ...                         #   Other notation files
+│   └── tests/                          # Test files
+├── dune-project                        # Dune project file
+├── _CoqProject                         # Coq project file, for use with CoqIDE
+
+```

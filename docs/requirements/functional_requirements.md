@@ -3,11 +3,11 @@
 ## 1. Proof Construction
 
 1.1. The system shall allow users to construct natural deduction proofs step by step.
+1.1.1 The system shall implement tactics for each natural deduction rule.
+1.1.1.1 The tactics shall examing the current proof state for applicability of the rule.
+1.1.1.2 The tactics shall manipulate the proof state according to the rule.
 1.2. The system shall validate each proof step according to natural deduction rules.
 1.3. The system shall provide feedback on incorrect proof steps.
-1.4. The system shall allow users to undo/redo proof steps.
-1.5. The system shall allow users to save proofs in progress.
-1.6. The system shall allow users to load and continue working on saved proofs.
 
 ## 2. Natural Deduction Rules Reference
 

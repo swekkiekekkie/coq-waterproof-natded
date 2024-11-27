@@ -25,8 +25,7 @@ Findings are documented in [docs/design/design_document.md](design_document.md).
 
 - Come up with natural language formulations of the rules of natural deduction.
     - both forward and backward rules
-- Write the coq-waterproof-natded theory, mimicking the structure and style of the coq-waterproof theory, but using natural deduction proof rules.
-
+- Write the coq-waterproof-natded theory, but using natural deduction proof rules.
 - For the backward rules, we can build on BenV2.v, which has tactics for the backward rules.
 
 Findings are documented in [docs/design/design_document.md](design_document.md).

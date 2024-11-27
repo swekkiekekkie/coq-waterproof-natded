@@ -1,0 +1,4 @@
+(coq.theory
+  (name WaterproofNatDed)
+  (package coq-waterproof-natded)
+  (flags :standard))
